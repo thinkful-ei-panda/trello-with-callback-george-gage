@@ -13,10 +13,14 @@ function List(props) {
             <Card key={card.id} 
             title={card.title} 
             content={card.content} 
+            delete={props.onDeleteCard}
             />
         ))}
         
-        <button type="button" className="List-add-button">
+        <button 
+        type="button" 
+        className="List-add-button"
+        onClick={props.onRandomCard}>
           + Add Random Card
         </button>
       </div>
