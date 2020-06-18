@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import STORE from './store';
 import './List.css';
 
 function List(props) {
@@ -10,10 +9,10 @@ function List(props) {
         <h2>{props.header}</h2>
       </header>
       <div className="List-cards">
-        {props.cardIds.map(listItem => (
-            <Card key={STORE.allCards[listItem].id} 
-            title={STORE.allCards[listItem].title} 
-            content={STORE.allCards[listItem].content} 
+        {props.cardIds.map(card => (
+            <Card key={card.id} 
+            title={card.title} 
+            content={card.content} 
             />
         ))}
         
